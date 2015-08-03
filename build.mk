@@ -5,11 +5,10 @@ LIBRARY=libscribe_utils.so
 
 CC = gcc
 CXX = g++
-CFLAGS=-fPIC -g -pipe -m64
+CFLAGS=-fPIC -g -pipe
 
 THRIFT_INCLUDES=-I/usr/include/thrift -I/usr/include/thrift/fb303
 COMMON_INCLUDES=
-COMMON_LDFLAGS= -L/usr/lib64
 SHARED_LDFLAGS=-shared
 
 CPP_INCLUDES= $(THRIFT_INCLUDES) -I$(CURRENT_DIR)/gen-cpp
@@ -19,7 +18,7 @@ C_INCLUDES =
 C_LDFLAGS = 
 
 INCLUDES := $(C_INCLUDES) $(COMMON_INCLUDES) $(CPP_INCLUDES) -I$(CURRENT_DIR)
-LDFLAGS := $(MYSQL_FLAGS) $(COMMON_LDFLAGS) $(C_LDFLAGS) $(CPP_LDFLAGS) 
+LDFLAGS := $(COMMON_LDFLAGS) $(C_LDFLAGS) $(CPP_LDFLAGS) 
 
 # Directories containing c++
 CPP_DIRECTORIES = gen-cpp scribe
