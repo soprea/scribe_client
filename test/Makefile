@@ -2,7 +2,7 @@ CURRENT_DIR = $(shell pwd)
 COMPILE_DIR = $(CURRENT_DIR)/../
 
 CFLAGS = -fPIC -g -pipe
-LDFLAGS = -L$(COMPILE_DIR) -lscribe_utils -lmysqlclient -lpthread -lz -lm -ldl
+LDFLAGS = -L$(COMPILE_DIR) -lscribe_utils -lpthread -lz -lm -ldl
 INCLUDES = -I$(COMPILE_DIR) -DBIG_JOINS=1  -fno-strict-aliasing   -g -DNDEBUG
 
 CC = gcc
